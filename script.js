@@ -1,6 +1,6 @@
-/* =========================
-   PRODUCTOS
-========================= */
+/*
+    PRODUCTOS
+*/
 
 let productos = [
 
@@ -69,3 +69,55 @@ let productos = [
     }
 
 ];
+
+/*
+   CARRITO
+*/
+
+let carrito = [];
+
+/* 
+   MOSTRAR PRODUCTOS
+*/
+
+function mostrarProductos(lista = productos) {
+
+    let contenedor =
+        document.getElementById("listaProductos");
+
+    contenedor.innerHTML = "";
+
+    lista.forEach(function(producto) {
+        contenedor.innerHTML += `
+
+            <div class="producto">
+
+                <img
+                    src="${producto.imagen}"
+                    alt="${producto.nombre}"
+                >
+
+                <div class="producto-info">
+
+                    <p class="categoria">
+                        ${producto.categoria}
+                    </p>
+
+                    <h3>
+                        ${producto.nombre}
+                    </h3>
+
+                    <p class="precio">
+                        $${producto.precio.toLocaleString("es-CO")}
+                    </p>
+
+                    <button
+                        onclick="agregarCarrito(${producto.id})">
+                        Agregar al carrito
+                    </button>
+
+                </div>
+            </div>
+        `;
+    });
+}
