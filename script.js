@@ -259,3 +259,59 @@ function mostrarInicio() {
         behavior: "smooth"
     });
 }
+
+
+/*
+   REALIZAR PEDIDO
+*/
+
+function realizarPedido() {
+    if(carrito.length === 0) {
+        alert(
+            "Primero debes agregar productos al carrito."
+        );
+        return;
+    }
+
+
+    let nombre =
+        prompt("Ingresa tu nombre completo:");
+    if(nombre === null || nombre === "") {
+        alert("Debes ingresar tu nombre.");
+        return;
+    }
+
+
+    let telefono =
+        prompt("Ingresa tu número de teléfono:");
+    if(telefono === null || telefono === "") {
+        alert("Debes ingresar tu teléfono.");
+        return;
+    }
+
+
+    let direccion =
+        prompt("Ingresa tu dirección:");
+    if(direccion === null || direccion === "") {
+ jh       alert("Debes ingresar tu dirección.");
+        return;
+    }
+
+
+    alert(
+        "¡Pedido realizado correctamente!\n\n" +
+        "Cliente: " + nombre + "\n" +
+        "Teléfono: " + telefono + "\n" +
+        "Dirección: " + direccion
+    );
+
+    carrito = [];
+    mostrarCarrito()
+}
+
+/*
+   INICIAR PÁGINA
+*/
+
+mostrarProductos();
+mostrarCarrito();
