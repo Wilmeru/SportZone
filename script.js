@@ -211,3 +211,20 @@ function eliminarCarrito(indice) {
     mostrarCarrito();
 }
 
+/*
+   FILTRAR
+*/
+
+function filtrar(categoria) {
+
+    let resultado =
+        productos.filter(function(producto) {
+            return producto.categoria === categoria;
+        });
+    mostrarProductos(resultado);
+
+    document.getElementById("productos")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
