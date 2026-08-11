@@ -94,9 +94,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   BOTONES
-========================= */
+/*BOTONES*/
 
 .boton {
     background-color: #d7ed18;
@@ -122,9 +120,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   CONTENEDOR
-========================= */
+/*CONTENEDOR*/
 
 .contenedor {
     width: 86%;
@@ -135,5 +131,148 @@ nav a:hover {
 
 .contenedor h2 {
     margin-bottom: 20px;
+}
+
+
+/*CATEGORÍAS*/
+
+.categorias {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.categorias button {
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.categorias button:hover {
+    border-color: #d7ed18;
+}
+
+.categorias span {
+    display: block;
+
+    font-size: 14px;
+
+    margin-top: 10px;
+
+    font-weight: bold;
+}
+
+
+/*TITULO PRODUCTOS*/
+
+.titulo-productos {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+#buscador {
+    width: 250px;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+
+/*PRODUCTOS*/
+
+.productos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+}
+
+.producto img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    background-color: #f7f7f7;
+}
+
+.producto-info {
+    padding: 15px;
+}
+
+.producto-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.categoria {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.precio {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.producto button {
+    width: 100%;
+
+    background-color: #d7ed18;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.producto button:hover {
+    background-color: #c2d60e;
 }
 
