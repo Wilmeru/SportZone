@@ -93,3 +93,47 @@ nav a:hover {
     line-height: 1.5;
 }
 
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    background-color: #d7ed18;
+    color: #071b2d;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+.boton:hover {
+    background-color: #c2d60e;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+.contenedor h2 {
+    margin-bottom: 20px;
+}
+
