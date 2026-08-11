@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SportZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="logo">
+            SPORT<span>ZONE</span>
+        </div>
+
+        <nav>
+            <a href="#" onclick="mostrarInicio()">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#carrito">Carrito 🛒</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INICIO -->
+    <section class="inicio">
+
+        <div class="inicio-texto">
+
+            <h1>
+                TU PASIÓN,<br>
+                <span>NUESTRO EQUIPO</span>
+            </h1>
+
+            <p>
+                Encuentra productos deportivos
+                para acompañarte en cada entrenamiento.
+            </p>
+
+            <a href="#productos" class="boton">
+                Ver productos
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="contenedor">
+
+        <h2>Categorías</h2>
+
+        <div class="categorias">
+
+            <button onclick="filtrar('Calzado')">
+                👟
+                <span>Calzado</span>
+            </button>
+
+            <button onclick="filtrar('Ropa')">
+                👕
+                <span>Ropa</span>
+            </button>
+
+            <button onclick="filtrar('Balones')">
+                ⚽
+                <span>Balones</span>
+            </button>
+
+            <button onclick="filtrar('Accesorios')">
+                🎒
+                <span>Accesorios</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="contenedor">
+
+        <div class="titulo-productos">
+
+            <h2>Productos</h2>
+
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar producto..."
+                onkeyup="buscarProducto()"
+            >
+
+        </div>
+
+
+        <div id="listaProductos" class="productos">
+
+        </div>
+
+    </section>
+
+
+    <!-- CARRITO -->
+    <section id="carrito" class="contenedor">
+
+        <h2>Carrito de compras</h2>
+
+        <div id="listaCarrito">
+
+            <p class="carrito-vacio">
+                Tu carrito está vacío.
+            </p>
+
+        </div>
+
+        <div class="total">
+
+            <h3>
+                Total:
+                <span id="total">$0</span>
+            </h3>
+
+            <button class="boton" onclick="realizarPedido()">
+                Realizar pedido
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            SPORT<span>ZONE</span>
+        </div>
+
+        <p>
+            Tu tienda deportiva online
+        </p>
+
+        <p>
+            © 2026 SportZone
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
