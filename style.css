@@ -53,3 +53,43 @@ nav a:hover {
     color: #d7ed18;
 }
 
+
+/*INICIO*/
+
+.inicio {
+    min-height: 430px;
+
+    background-image:
+        linear-gradient(
+            rgba(7, 27, 45, 0.85),
+            rgba(7, 27, 45, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1400&q=80");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+}
+
+.inicio-texto {
+    color: white;
+    max-width: 550px;
+}
+
+.inicio h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 span {
+    color: #d7ed18;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
