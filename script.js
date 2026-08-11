@@ -228,3 +228,34 @@ function filtrar(categoria) {
             behavior: "smooth"
         });
 }
+
+/*
+   BUSCAR
+ */
+
+function buscarProducto() {
+
+    let texto =
+        document.getElementById("buscador")
+        .value
+        .toLowerCase();
+
+    let resultado =
+        productos.filter(function(producto) {
+            return producto.nombre
+                .toLowerCase()
+                .includes(texto);
+        });
+    mostrarProductos(resultado);
+}
+
+/*
+   MOSTRAR INICIO
+*/
+
+function mostrarInicio() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
