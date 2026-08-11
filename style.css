@@ -276,3 +276,60 @@ nav a:hover {
     background-color: #c2d60e;
 }
 
+
+/*CARRITO*/
+
+#carrito {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ddd;
+}
+
+.carrito-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 15px 0;
+}
+
+.carrito-item h3 {
+    font-size: 16px;
+}
+
+.carrito-item button {
+    background-color: #071b2d;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.carrito-vacio {
+    color: #777;
+}
+
+.total {
+    text-align: right;
+
+    margin-top: 20px;
+}
+
+.total h3 {
+    margin-bottom: 15px;
+}
+
