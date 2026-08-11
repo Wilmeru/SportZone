@@ -121,3 +121,93 @@ function mostrarProductos(lista = productos) {
         `;
     });
 }
+
+/*
+   AGREGAR AL CARRITO
+*/
+
+function agregarCarrito(id) {
+
+    let producto =
+        productos.find(function(producto) {
+
+            return producto.id === id;
+
+        });
+
+    carrito.push(producto);
+
+    mostrarCarrito();
+
+    alert(
+        producto.nombre +
+        " fue agregado al carrito."
+    );
+}
+
+
+/*
+   MOSTRAR CARRITO
+*/
+
+function mostrarCarrito() {
+
+    let contenedor =
+        document.getElementById("listaCarrito");
+    let total = 0;
+
+    if(carrito.length === 0) {
+
+        contenedor.innerHTML = `
+            <p class="carrito-vacio">
+                Tu carrito está vacío.
+            </p>
+        `;
+
+        document.getElementById("total")
+            .textContent = "$0";
+        return;
+    }
+
+    contenedor.innerHTML = "";
+
+    carrito.forEach(function(producto, indice) {
+        total += producto.precio;
+        contenedor.innerHTML += `
+
+            <div class="carrito-item">
+                <div>
+                    <h3>
+                        ${producto.nombre}
+                    </h3>
+
+                    <p>
+                        $${producto.precio.toLocaleString("es-CO")}
+                    </p>
+                </div>
+
+
+                <button
+                    onclick="eliminarCarrito(${indice})">
+                    Eliminar
+                </button>
+            </div>
+        `;
+    });
+
+    document.getElementById("total")
+        .textContent =
+        "$" + total.toLocaleString("es-CO");
+
+}
+
+
+/*
+   ELIMINAR DEL CARRITO
+*/
+
+function eliminarCarrito(indice) {
+    carrito.splice(indice, 1);
+    mostrarCarrito();
+}
+
